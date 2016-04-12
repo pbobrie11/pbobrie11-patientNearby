@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144DD5D11CA2737EFB96F2F215017997 /* Pods-nearbyPOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A50985F844BC54DC9E7C9C42E42DE /* Pods-nearbyPOC-dummy.m */; };
+		51F9E6F11592FA6FF7900FD50723D2F6 /* Pods-nearbyPOC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E683757007F9EFE923D3CE09E42B167 /* Pods-nearbyPOC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65E1F082E53B75D8C68D238AAA485E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05891CAF0744A6E5BAF55738B37A2502 /* libProtocolBuffers_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libProtocolBuffers_external.a; path = Libraries/libProtocolBuffers_external.a; sourceTree = "<group>"; };
+		0B9A50985F844BC54DC9E7C9C42E42DE /* Pods-nearbyPOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nearbyPOC-dummy.m"; sourceTree = "<group>"; };
+		0C467F29AAF290B9A07872D93851A339 /* GNSSharedResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GNSSharedResources.bundle; path = Resources/GNSSharedResources.bundle; sourceTree = "<group>"; };
+		0E659CA87FA72F6F9867FD5FD9C26587 /* GNSError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSError.h; path = Headers/Public/GNSError.h; sourceTree = "<group>"; };
+		0ED33CA5B49D429429BE28B3963F7F45 /* GNSPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSPermission.h; path = Headers/Public/GNSPermission.h; sourceTree = "<group>"; };
+		17084FD72D2510C85F9EFE4E356CFF80 /* GNSOperationStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSOperationStatus.h; path = Headers/Public/GNSOperationStatus.h; sourceTree = "<group>"; };
+		19F16A31B67C83DC379D8BF489CD3CD9 /* libGNSMessages.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGNSMessages.a; path = Libraries/libGNSMessages.a; sourceTree = "<group>"; };
+		1C2B306B78015143266F418748799D2A /* libGTM_NSStringHTML_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSStringHTML_external.a; path = Libraries/libGTM_NSStringHTML_external.a; sourceTree = "<group>"; };
+		1C3E5C6DA7CB7314188BA49D4F84AEB1 /* libGTM_NSStringXML_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSStringXML_external.a; path = Libraries/libGTM_NSStringXML_external.a; sourceTree = "<group>"; };
+		268F0B8AD736CECDEE53C31EE23EE5DD /* libGTM_NSScannerJSON_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSScannerJSON_external.a; path = Libraries/libGTM_NSScannerJSON_external.a; sourceTree = "<group>"; };
+		26B78AC339281DFD4E6BB37E0EF79DBD /* libGTM_DebugUtils_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_DebugUtils_external.a; path = Libraries/libGTM_DebugUtils_external.a; sourceTree = "<group>"; };
+		27D8BF0CE9A8967A49EC3AED19DF2A2B /* Pods-nearbyPOC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-nearbyPOC-frameworks.sh"; sourceTree = "<group>"; };
+		2CA236AEE8DF3B047F348DD21D5692EE /* libGTM_UIFont+LineHeight_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_UIFont+LineHeight_external.a"; path = "Libraries/libGTM_UIFont+LineHeight_external.a"; sourceTree = "<group>"; };
+		2EECAA7061726B51DF95E4EF8C632DBE /* Pods-nearbyPOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-nearbyPOC.modulemap"; sourceTree = "<group>"; };
+		377AB83834048EB134A8224B20D67D2E /* Pods_nearbyPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nearbyPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F5B097340223CCF5498266199D872F6 /* ic_expand_more.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = ic_expand_more.xcassets; path = Resources/ic_expand_more.xcassets; sourceTree = "<group>"; };
+		4124A434405EA7F172E99ED3FC23AFD0 /* GNSStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSStrategy.h; path = Headers/Public/GNSStrategy.h; sourceTree = "<group>"; };
+		4679310B1EDF782EF22EA24EAD8ABCFB /* libGTM_NSData+zlib_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_NSData+zlib_external.a"; path = "Libraries/libGTM_NSData+zlib_external.a"; sourceTree = "<group>"; };
+		46E969F1A26C845FDF110F731208508D /* libGTM_StringEncoding_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_StringEncoding_external.a; path = Libraries/libGTM_StringEncoding_external.a; sourceTree = "<group>"; };
+		4AD80FDC99449007FCB8BF7A65CE834D /* GNSSubscriptionParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSSubscriptionParams.h; path = Headers/Public/GNSSubscriptionParams.h; sourceTree = "<group>"; };
+		4D0220CF4C524807E23810999B773C1B /* libGTM_RoundedRectPath_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_RoundedRectPath_external.a; path = Libraries/libGTM_RoundedRectPath_external.a; sourceTree = "<group>"; };
+		51AE2554B23339C762A9A4C443C9A69D /* libGTMSessionFetcher_full_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMSessionFetcher_full_external.a; path = Libraries/libGTMSessionFetcher_full_external.a; sourceTree = "<group>"; };
+		525E0D2E4015541A9BE6FE1CC5C74292 /* GNSMessageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSMessageManager.h; path = Headers/Public/GNSMessageManager.h; sourceTree = "<group>"; };
+		54262E8387D6036EF01C687DF33B2213 /* libGSDK_Overload_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGSDK_Overload_external.a; path = Libraries/libGSDK_Overload_external.a; sourceTree = "<group>"; };
+		57B68AF88A562A1F088B89C48093A7F4 /* GNSPublicationParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSPublicationParams.h; path = Headers/Public/GNSPublicationParams.h; sourceTree = "<group>"; };
+		5F198181A85A94F75340F3D25C8D4091 /* Pods-nearbyPOC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-nearbyPOC-resources.sh"; sourceTree = "<group>"; };
+		602C56D06020EF87B03AEDEBF3C9C25A /* libGTM_iPhone_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_iPhone_external.a; path = Libraries/libGTM_iPhone_external.a; sourceTree = "<group>"; };
+		66D161CF2AE703FBEE103C699C7E9217 /* GNSBeaconStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSBeaconStrategy.h; path = Headers/Public/GNSBeaconStrategy.h; sourceTree = "<group>"; };
+		6C3C6CE34165548BFC2B17E344210108 /* libGTM_NSDictionary+URLArguments_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_NSDictionary+URLArguments_external.a"; path = "Libraries/libGTM_NSDictionary+URLArguments_external.a"; sourceTree = "<group>"; };
+		6CAB17568AB2E1A010659B1F208F336A /* libGTM_core_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_core_external.a; path = Libraries/libGTM_core_external.a; sourceTree = "<group>"; };
+		747B52B6E091BFFF585C374189B9AB00 /* libGTM_SystemVersion_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_SystemVersion_external.a; path = Libraries/libGTM_SystemVersion_external.a; sourceTree = "<group>"; };
+		7A635C34102690CDCE43296B384C18EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88E3BBE1CB0156844CB61BAFF89EB9E4 /* ic_nearby_48pt.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = ic_nearby_48pt.xcassets; path = Resources/ic_nearby_48pt.xcassets; sourceTree = "<group>"; };
+		8E683757007F9EFE923D3CE09E42B167 /* Pods-nearbyPOC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nearbyPOC-umbrella.h"; sourceTree = "<group>"; };
+		90ABBBABF43002948AB49B956A6CE13E /* libGTMSessionFetcher_core_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMSessionFetcher_core_external.a; path = Libraries/libGTMSessionFetcher_core_external.a; sourceTree = "<group>"; };
+		96A69DE0D1901223474B86C03C3EE523 /* GNSMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSMessages.h; path = Headers/Public/GNSMessages.h; sourceTree = "<group>"; };
+		AB3CB850729B5F07D2790E590277911D /* Pods-nearbyPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nearbyPOC.debug.xcconfig"; sourceTree = "<group>"; };
+		B3E5425FDEFE88862FA55BB92806BF5D /* Pods-nearbyPOC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nearbyPOC-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEAC3A34B4FC30AA082B02D7013137C3 /* libGTM_KVO_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_KVO_external.a; path = Libraries/libGTM_KVO_external.a; sourceTree = "<group>"; };
+		C720FBAA2D88B65C1699CA82A205BBFE /* libGTM_GTMURLBuilder_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_GTMURLBuilder_external.a; path = Libraries/libGTM_GTMURLBuilder_external.a; sourceTree = "<group>"; };
+		CC02AFE8DC7AAFA2B43D14D9C3AE6CD7 /* libGTMStackTrace_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMStackTrace_external.a; path = Libraries/libGTMStackTrace_external.a; sourceTree = "<group>"; };
+		D4AABE7E6B73931959CE7B475EA171D1 /* libGTM_Regex_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_Regex_external.a; path = Libraries/libGTM_Regex_external.a; sourceTree = "<group>"; };
+		D4D8446C6DFC1941CE2CAB9BE3F59CBB /* GNSMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GNSMessage.h; path = Headers/Public/GNSMessage.h; sourceTree = "<group>"; };
+		D93A6D91F830E79834EF23ABE33AE3E2 /* Pods-nearbyPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nearbyPOC.release.xcconfig"; sourceTree = "<group>"; };
+		EB5572BF2D6BDE0EF157ED4D7E9BB0C3 /* Pods-nearbyPOC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nearbyPOC-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F2C7E7E2C2E8E50279A5226CFAF8322E /* libGTM_AddressBook_external.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_AddressBook_external.a; path = Libraries/libGTM_AddressBook_external.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F73A8BA26CF1047E76D4430A378516A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE65E1F082E53B75D8C68D238AAA485E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		208EEFA93CBB489E5E68EE10EF6D8C53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87AAF0626CB2C947690DE7617A3FB05C /* GoogleInterchangeUtilities */,
+				C6425E63AE19B3113958C968E5AD0A9B /* GoogleNetworkingUtilities */,
+				72B2DB1BA2A188BF403B8A8C3ED23C53 /* GoogleSymbolUtilities */,
+				B798D8191F13BB2379B68324E1E6CFB2 /* GoogleUtilities */,
+				F1788F9F648F8BFFA32BCDBEA784806A /* NearbyMessages */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		62F7441A50019713CC2E28D6709AB7F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				377AB83834048EB134A8224B20D67D2E /* Pods_nearbyPOC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6799587082A4D81C91B579EBD89A8634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54262E8387D6036EF01C687DF33B2213 /* libGSDK_Overload_external.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B3FA1D90700EF7CB6CBE3F9044DB659 /* Pods-nearbyPOC */ = {
+			isa = PBXGroup;
+			children = (
+				7A635C34102690CDCE43296B384C18EE /* Info.plist */,
+				2EECAA7061726B51DF95E4EF8C632DBE /* Pods-nearbyPOC.modulemap */,
+				EB5572BF2D6BDE0EF157ED4D7E9BB0C3 /* Pods-nearbyPOC-acknowledgements.markdown */,
+				B3E5425FDEFE88862FA55BB92806BF5D /* Pods-nearbyPOC-acknowledgements.plist */,
+				0B9A50985F844BC54DC9E7C9C42E42DE /* Pods-nearbyPOC-dummy.m */,
+				27D8BF0CE9A8967A49EC3AED19DF2A2B /* Pods-nearbyPOC-frameworks.sh */,
+				5F198181A85A94F75340F3D25C8D4091 /* Pods-nearbyPOC-resources.sh */,
+				8E683757007F9EFE923D3CE09E42B167 /* Pods-nearbyPOC-umbrella.h */,
+				AB3CB850729B5F07D2790E590277911D /* Pods-nearbyPOC.debug.xcconfig */,
+				D93A6D91F830E79834EF23ABE33AE3E2 /* Pods-nearbyPOC.release.xcconfig */,
+			);
+			name = "Pods-nearbyPOC";
+			path = "Target Support Files/Pods-nearbyPOC";
+			sourceTree = "<group>";
+		};
+		72B2DB1BA2A188BF403B8A8C3ED23C53 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				6799587082A4D81C91B579EBD89A8634 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				208EEFA93CBB489E5E68EE10EF6D8C53 /* Pods */,
+				62F7441A50019713CC2E28D6709AB7F7 /* Products */,
+				E5DEE1F3E6F714C2789D1B97E8CBCDE9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		87AAF0626CB2C947690DE7617A3FB05C /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB4340C86A435A1D130DAB90ABBFA117 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		AA1DAE7CE09A67E1F4DFDA14135C8D68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2C7E7E2C2E8E50279A5226CFAF8322E /* libGTM_AddressBook_external.a */,
+				6CAB17568AB2E1A010659B1F208F336A /* libGTM_core_external.a */,
+				26B78AC339281DFD4E6BB37E0EF79DBD /* libGTM_DebugUtils_external.a */,
+				C720FBAA2D88B65C1699CA82A205BBFE /* libGTM_GTMURLBuilder_external.a */,
+				602C56D06020EF87B03AEDEBF3C9C25A /* libGTM_iPhone_external.a */,
+				BEAC3A34B4FC30AA082B02D7013137C3 /* libGTM_KVO_external.a */,
+				4679310B1EDF782EF22EA24EAD8ABCFB /* libGTM_NSData+zlib_external.a */,
+				6C3C6CE34165548BFC2B17E344210108 /* libGTM_NSDictionary+URLArguments_external.a */,
+				268F0B8AD736CECDEE53C31EE23EE5DD /* libGTM_NSScannerJSON_external.a */,
+				1C2B306B78015143266F418748799D2A /* libGTM_NSStringHTML_external.a */,
+				1C3E5C6DA7CB7314188BA49D4F84AEB1 /* libGTM_NSStringXML_external.a */,
+				D4AABE7E6B73931959CE7B475EA171D1 /* libGTM_Regex_external.a */,
+				4D0220CF4C524807E23810999B773C1B /* libGTM_RoundedRectPath_external.a */,
+				46E969F1A26C845FDF110F731208508D /* libGTM_StringEncoding_external.a */,
+				747B52B6E091BFFF585C374189B9AB00 /* libGTM_SystemVersion_external.a */,
+				2CA236AEE8DF3B047F348DD21D5692EE /* libGTM_UIFont+LineHeight_external.a */,
+				CC02AFE8DC7AAFA2B43D14D9C3AE6CD7 /* libGTMStackTrace_external.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC97778229000A8395E467DADCEF027B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C467F29AAF290B9A07872D93851A339 /* GNSSharedResources.bundle */,
+				3F5B097340223CCF5498266199D872F6 /* ic_expand_more.xcassets */,
+				88E3BBE1CB0156844CB61BAFF89EB9E4 /* ic_nearby_48pt.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B798D8191F13BB2379B68324E1E6CFB2 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA1DAE7CE09A67E1F4DFDA14135C8D68 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C6425E63AE19B3113958C968E5AD0A9B /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DF71741C17D66229453C2D863C034CF6 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		CB4340C86A435A1D130DAB90ABBFA117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05891CAF0744A6E5BAF55738B37A2502 /* libProtocolBuffers_external.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF58F7413392E8CE0C626D94C85CCDBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19F16A31B67C83DC379D8BF489CD3CD9 /* libGNSMessages.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF71741C17D66229453C2D863C034CF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90ABBBABF43002948AB49B956A6CE13E /* libGTMSessionFetcher_core_external.a */,
+				51AE2554B23339C762A9A4C443C9A69D /* libGTMSessionFetcher_full_external.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5DEE1F3E6F714C2789D1B97E8CBCDE9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B3FA1D90700EF7CB6CBE3F9044DB659 /* Pods-nearbyPOC */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F1788F9F648F8BFFA32BCDBEA784806A /* NearbyMessages */ = {
+			isa = PBXGroup;
+			children = (
+				66D161CF2AE703FBEE103C699C7E9217 /* GNSBeaconStrategy.h */,
+				0E659CA87FA72F6F9867FD5FD9C26587 /* GNSError.h */,
+				D4D8446C6DFC1941CE2CAB9BE3F59CBB /* GNSMessage.h */,
+				525E0D2E4015541A9BE6FE1CC5C74292 /* GNSMessageManager.h */,
+				96A69DE0D1901223474B86C03C3EE523 /* GNSMessages.h */,
+				17084FD72D2510C85F9EFE4E356CFF80 /* GNSOperationStatus.h */,
+				0ED33CA5B49D429429BE28B3963F7F45 /* GNSPermission.h */,
+				57B68AF88A562A1F088B89C48093A7F4 /* GNSPublicationParams.h */,
+				4124A434405EA7F172E99ED3FC23AFD0 /* GNSStrategy.h */,
+				4AD80FDC99449007FCB8BF7A65CE834D /* GNSSubscriptionParams.h */,
+				DF58F7413392E8CE0C626D94C85CCDBB /* Frameworks */,
+				AC97778229000A8395E467DADCEF027B /* Resources */,
+			);
+			path = NearbyMessages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		290FE51F9EB86AA8D91A80CCA90E236C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F9E6F11592FA6FF7900FD50723D2F6 /* Pods-nearbyPOC-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C2350C4DE101C521DF3119B061A88D8A /* Pods-nearbyPOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E48DCA735F35953EF14F0B4999EA2A8 /* Build configuration list for PBXNativeTarget "Pods-nearbyPOC" */;
+			buildPhases = (
+				E5C6A337EAE2D48236112E2564A7BA21 /* Sources */,
+				F73A8BA26CF1047E76D4430A378516A2 /* Frameworks */,
+				290FE51F9EB86AA8D91A80CCA90E236C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-nearbyPOC";
+			productName = "Pods-nearbyPOC";
+			productReference = 377AB83834048EB134A8224B20D67D2E /* Pods_nearbyPOC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 62F7441A50019713CC2E28D6709AB7F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2350C4DE101C521DF3119B061A88D8A /* Pods-nearbyPOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5C6A337EAE2D48236112E2564A7BA21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144DD5D11CA2737EFB96F2F215017997 /* Pods-nearbyPOC-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		141A9E52B2EA9A38B72F626420D734FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3CB850729B5F07D2790E590277911D /* Pods-nearbyPOC.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-nearbyPOC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nearbyPOC/Pods-nearbyPOC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_nearbyPOC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB5C0AF3B42909B6941ADE9F9DEB82AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D93A6D91F830E79834EF23ABE33AE3E2 /* Pods-nearbyPOC.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-nearbyPOC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nearbyPOC/Pods-nearbyPOC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_nearbyPOC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E48DCA735F35953EF14F0B4999EA2A8 /* Build configuration list for PBXNativeTarget "Pods-nearbyPOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141A9E52B2EA9A38B72F626420D734FD /* Debug */,
+				BB5C0AF3B42909B6941ADE9F9DEB82AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

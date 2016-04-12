@@ -1,0 +1,16 @@
+{
+   "ccLocs":[
+      {
+         "location":"James'",
+         "url":"www.google.com"
+      },
+      {
+         "location":"Leo's",
+         "url":"www.yahoo.com"
+      },
+      {
+         "location":"Jeff's",
+         "url":"www.bing.com"
+      }
+   ]
+}
