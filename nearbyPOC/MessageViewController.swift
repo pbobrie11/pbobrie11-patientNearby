@@ -102,8 +102,24 @@ class MessageViewController: UITableViewController {
 
     
     func addMessage(message: String!) {
-        messages.append(message.copy() as! String)
+       let messageArray = message.componentsSeparatedByString(",")
+        messages.append(messageArray[0].copy() as! String)
+        
+        checkRecId(messageArray[2], provider: messageArray[0])
+        
         tableView.reloadData()
+    }
+    
+    func checkRecId(recId: String, provider: String) {
+        let alertController = UIAlertController(title: "Payment", message: provider + " would like to receive payment", preferredStyle: .Alert)
+        
+        let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        if recId == myDevId {
+            presentViewController(alertController, animated: true, completion: nil)
+        } else{
+            //nothing?
+        }
     }
     
     func removeMessage(message: String!) {
@@ -164,7 +180,6 @@ class MessageViewController: UITableViewController {
         } else {
             stopPublication()
         }
-        print("It ran")
     }
     
     // MARK: - UItableViewDelegate

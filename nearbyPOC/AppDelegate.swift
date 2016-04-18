@@ -103,17 +103,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func startPublish() {
+        
+        // get Name, dev ID and rec ID and pass as message to other device
         var nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
         let name: String = nameCheck as! String
         
         var dev = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        let recID = " "
+        
+        let message = name + "," + dev + "," + recID
         
         if let messageMgr = self.messageMgr {
             // Show the name in the message view title and set up the Stop button.
             messageViewController.title = name
             
             // Publish the name to nearby devices.
-            let pubMessage: GNSMessage = GNSMessage(content: dev.dataUsingEncoding(NSUTF8StringEncoding,
+            let pubMessage: GNSMessage = GNSMessage(content: message.dataUsingEncoding(NSUTF8StringEncoding,
                 allowLossyConversion: true))
             publication = messageMgr.publicationWithMessage(pubMessage)
         }
