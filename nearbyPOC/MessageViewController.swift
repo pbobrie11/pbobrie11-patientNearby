@@ -38,7 +38,8 @@ class MessageViewController: UITableViewController {
         }
     }
     
-    var messages = [String]()
+    var namesArr = [String]()
+    var devArr = [String]()
     
     //variable to handle name of device / provider
     
@@ -103,9 +104,18 @@ class MessageViewController: UITableViewController {
     
     func addMessage(message: String!) {
        let messageArray = message.componentsSeparatedByString(",")
-        messages.append(messageArray[0].copy() as! String)
         
         checkRecId(messageArray[2], provider: messageArray[0])
+        
+        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        
+        if devArr.contains(messageArray[1]) {
+            print("repeat device")
+        } else {
+            namesArr.append(messageArray[0].copy() as! String)
+            devArr.append(messageArray[1])
+        }
         
         tableView.reloadData()
     }
@@ -122,10 +132,11 @@ class MessageViewController: UITableViewController {
         }
     }
     
+    
     func removeMessage(message: String!) {
-        if let index = messages.indexOf(message)
+        if let index = namesArr.indexOf(message)
         {
-            messages.removeAtIndex(index)
+            namesArr.removeAtIndex(index)
         }
         tableView.reloadData()
     }
@@ -137,12 +148,12 @@ class MessageViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return namesArr.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = messages[indexPath.row]
+        cell.textLabel?.text = namesArr[indexPath.row]
         return cell
     }
     
@@ -173,7 +184,7 @@ class MessageViewController: UITableViewController {
     }
     
     func determinePubStatus(){
-        let count = messages.count
+        let count = namesArr.count
         
         if count > 0 {
             startPublication()
@@ -188,7 +199,7 @@ class MessageViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let indexPath = indexPath.row
-        let labelText = messages[indexPath]
+        let labelText = namesArr[indexPath]
         let url: String? = provDict[labelText]
         checkURL(url)
     }
