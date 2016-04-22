@@ -15,6 +15,7 @@
 		14A6E3771CAC5AB600C27E36 /* nearbyPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6E3761CAC5AB600C27E36 /* nearbyPOCTests.swift */; };
 		14A6E3831CAC67EB00C27E36 /* getBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6E3821CAC67EB00C27E36 /* getBridgingHeader.m */; };
 		14ED70CF1CB6EA5900A8001E /* cc.json in Resources */ = {isa = PBXBuildFile; fileRef = 14ED70CE1CB6EA5900A8001E /* cc.json */; };
+		14EEC3C31CC6AD9C000B5C87 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EEC3C21CC6AD9C000B5C87 /* Settings.swift */; };
 		E74ED024230E703B8E28392F /* Pods_nearbyPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD049F505279F777E12E3BD /* Pods_nearbyPOC.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		14A6E3811CAC67EB00C27E36 /* nearbyPOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nearbyPOC-Bridging-Header.h"; sourceTree = "<group>"; };
 		14A6E3821CAC67EB00C27E36 /* getBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getBridgingHeader.m; sourceTree = "<group>"; };
 		14ED70CE1CB6EA5900A8001E /* cc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cc.json; sourceTree = "<group>"; };
+		14EEC3C21CC6AD9C000B5C87 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2C33AC30CFC49BCD27CA3B0F /* Pods-nearbyPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nearbyPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-nearbyPOC/Pods-nearbyPOC.release.xcconfig"; sourceTree = "<group>"; };
 		2CD049F505279F777E12E3BD /* Pods_nearbyPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nearbyPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46979EE8934624511D8940EC /* Pods-nearbyPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nearbyPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nearbyPOC/Pods-nearbyPOC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				14A6E3611CAC5AB600C27E36 /* AppDelegate.swift */,
 				14ED70CE1CB6EA5900A8001E /* cc.json */,
+				14EEC3C21CC6AD9C000B5C87 /* Settings.swift */,
 				14A6E3821CAC67EB00C27E36 /* getBridgingHeader.m */,
 				14A6E3631CAC5AB600C27E36 /* MessageViewController.swift */,
 				14A6E3651CAC5AB600C27E36 /* Main.storyboard */,
@@ -284,6 +287,7 @@
 			files = (
 				14A6E3641CAC5AB600C27E36 /* MessageViewController.swift in Sources */,
 				14A6E3831CAC67EB00C27E36 /* getBridgingHeader.m in Sources */,
+				14EEC3C31CC6AD9C000B5C87 /* Settings.swift in Sources */,
 				14A6E3621CAC5AB600C27E36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

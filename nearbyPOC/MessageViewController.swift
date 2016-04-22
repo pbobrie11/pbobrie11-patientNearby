@@ -11,6 +11,7 @@ import Foundation
 
 let cellIdentifier = "messageCell"
 
+
 class MessageViewController: UITableViewController {
     /**
     * @property
@@ -40,6 +41,9 @@ class MessageViewController: UITableViewController {
     
     var namesArr = [String]()
     var devArr = [String]()
+    var stateArr = [String]()
+    
+    let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
     
     //variable to handle name of device / provider
     
@@ -51,6 +55,7 @@ class MessageViewController: UITableViewController {
         checkForId()
         
     var checkTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("determinePubStatus"), userInfo: nil, repeats: true)
+        print(namesArr)
 
                 }
 
@@ -102,22 +107,16 @@ class MessageViewController: UITableViewController {
     
 
     
-    func addMessage(message: String!) {
-       let messageArray = message.componentsSeparatedByString(",")
-        
-        checkRecId(messageArray[2], provider: messageArray[0])
-        
-        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
-        
-        
-        if devArr.contains(messageArray[1]) {
+    func checkDevId(state: String, name: String, devId: String){
+        if devArr.contains(devId) {
             print("repeat device")
+            print(devArr)
         } else {
-            namesArr.append(messageArray[0].copy() as! String)
-            devArr.append(messageArray[1])
+            namesArr.append(name.copy() as! String)
+            devArr.append(devId)
+            stateArr.append(state)
         }
-        
-        tableView.reloadData()
+            tableView.reloadData()
     }
     
     func checkRecId(recId: String, provider: String) {
@@ -132,11 +131,34 @@ class MessageViewController: UITableViewController {
         }
     }
     
+    func addMessage(message: String!) {
+        let messageArray = message.componentsSeparatedByString(",")
+        
+        //pull all components of message from messageArray
+        var state = messageArray[0]
+        var name = messageArray[1]
+        var devId = messageArray[2]
+        var recId = messageArray[3]
+        var amt = messageArray[4]
+        
+        
+        //function to handle whether the device Id has been sent before, if so then overwrite the indexpath for those arrays
+        
+        checkDevId(state, name: name, devId: devId)
+        
+        checkRecId(recId, provider: name)
+        
+    }
     
     func removeMessage(message: String!) {
-        if let index = namesArr.indexOf(message)
+        var messArr = message.componentsSeparatedByString(",")
+        var nameToRemove = messArr[1]
+        
+        if let index = namesArr.indexOf(nameToRemove)
         {
+            stateArr.removeAtIndex(index)
             namesArr.removeAtIndex(index)
+            devArr.removeAtIndex(index)
         }
         tableView.reloadData()
     }
@@ -191,6 +213,7 @@ class MessageViewController: UITableViewController {
         } else {
             stopPublication()
         }
+        print("Ran")
     }
     
     // MARK: - UItableViewDelegate

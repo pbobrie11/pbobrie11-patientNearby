@@ -9,6 +9,7 @@
 import UIKit
 
 var myAPIKey = "AIzaSyDrpWmPjqzVOHZGpX3PC8gB94JTpSqwVCQ"
+var devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -108,11 +109,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
         let name: String = nameCheck as! String
         
-        var dev = UIDevice.currentDevice().identifierForVendor!.UUIDString
-        
+        let state = "1"
         let recID = " "
+        let amt = " "
         
-        let message = name + "," + dev + "," + recID
+        
+        let message = state + "," + name + "," + devId + "," + recID + "," + amt
         
         if let messageMgr = self.messageMgr {
             // Show the name in the message view title and set up the Stop button.
