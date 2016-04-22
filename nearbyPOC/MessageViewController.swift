@@ -119,20 +119,33 @@ class MessageViewController: UITableViewController {
             tableView.reloadData()
     }
     
-    func checkRecId(recId: String, provider: String) {
-        let alertController = UIAlertController(title: "Payment", message: provider + " would like to receive payment", preferredStyle: .Alert)
+    func checkRecId(recId: String, provider: String, amt: String, devId: String) {
+       // let alertController = UIAlertController(title: "Payment", message: provider + " would like to receive payment", preferredStyle: .Alert)
         
         let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
         
         if recId == myDevId {
-            presentViewController(alertController, animated: true, completion: nil)
+        //    present View for accepting / cancelling charge request
+            let mainstoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let recVC : UIViewController = mainstoryboard.instantiateViewControllerWithIdentifier("receiveCharge")
+            let navController : UINavigationController
+            let navRoot = UINavigationController(rootViewController: recVC)
+            presentViewController(navRoot, animated: true, completion: nil)
+            
+            //set defaults for message values
+            NSUserDefaults.standardUserDefaults().setObject(devId, forKey: "chargingDevId")
+            NSUserDefaults.standardUserDefaults().setObject(provider, forKey: "provider")
+            NSUserDefaults.standardUserDefaults().setObject(amt, forKey: "amt")
         } else{
             //nothing?
         }
     }
     
+    
     func addMessage(message: String!) {
         let messageArray = message.componentsSeparatedByString(",")
+        
+        print(namesArr)
         
         //pull all components of message from messageArray
         var state = messageArray[0]
@@ -146,7 +159,7 @@ class MessageViewController: UITableViewController {
         
         checkDevId(state, name: name, devId: devId)
         
-        checkRecId(recId, provider: name)
+        checkRecId(recId, provider: name, amt: amt, devId: devId)
         
     }
     

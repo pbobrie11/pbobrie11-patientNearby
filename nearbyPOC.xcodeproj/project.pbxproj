@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A536851CCA786200C299AC /* ReceivePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A536841CCA786200C299AC /* ReceivePaymentViewController.swift */; };
 		14A6E3621CAC5AB600C27E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6E3611CAC5AB600C27E36 /* AppDelegate.swift */; };
 		14A6E3641CAC5AB600C27E36 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6E3631CAC5AB600C27E36 /* MessageViewController.swift */; };
 		14A6E3671CAC5AB600C27E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A6E3651CAC5AB600C27E36 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A536841CCA786200C299AC /* ReceivePaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivePaymentViewController.swift; sourceTree = "<group>"; };
 		14A6E35E1CAC5AB600C27E36 /* nearbyPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nearbyPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A6E3611CAC5AB600C27E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14A6E3631CAC5AB600C27E36 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				14A6E3611CAC5AB600C27E36 /* AppDelegate.swift */,
 				14ED70CE1CB6EA5900A8001E /* cc.json */,
+				14A536841CCA786200C299AC /* ReceivePaymentViewController.swift */,
 				14EEC3C21CC6AD9C000B5C87 /* Settings.swift */,
 				14A6E3821CAC67EB00C27E36 /* getBridgingHeader.m */,
 				14A6E3631CAC5AB600C27E36 /* MessageViewController.swift */,
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A536851CCA786200C299AC /* ReceivePaymentViewController.swift in Sources */,
 				14A6E3641CAC5AB600C27E36 /* MessageViewController.swift in Sources */,
 				14A6E3831CAC67EB00C27E36 /* getBridgingHeader.m in Sources */,
 				14EEC3C31CC6AD9C000B5C87 /* Settings.swift in Sources */,
