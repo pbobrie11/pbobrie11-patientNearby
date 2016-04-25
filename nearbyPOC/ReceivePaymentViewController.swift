@@ -23,8 +23,6 @@ class ReceivePaymentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(printCheck())
-        
         messageLabel.sizeToFit()
         
         let recId : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("chargingDevId")
@@ -34,10 +32,14 @@ class ReceivePaymentViewController: UIViewController {
         providerString = provider as! String
         
         let amt : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("amt")
+        print(amt)
         amtString = amt as! String
+        var attributedString = NSMutableAttributedString(string: amtString)
+        
+        
         
         // Do any additional setup after loading the view.
-        messageLabel.text = providerString + " would like to charge you " + amtString
+        messageLabel.text = providerString + " would like to charge you $" + amtString
         
         //button formatting
         acceptButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
@@ -54,12 +56,7 @@ class ReceivePaymentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func printCheck () {
-        print(recIdString)
-        print(providerString)
-        print(amtString)
-        print("THE STRINGS SHOULD BE PRINTED ABOVE")
-    }
+    
 
     /*
     // MARK: - Navigation

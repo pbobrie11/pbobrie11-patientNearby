@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x3g-sD-peJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
@@ -34,47 +35,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmv-kg-PCo">
-                                <rect key="frame" x="134" y="186" width="332" height="64"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmv-kg-PCo">
+                                <rect key="frame" x="79" y="101" width="442" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="442" id="a0j-jC-9rN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a0j-jC-9rN"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Accept or Decline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXR-Dm-z03">
-                                <rect key="frame" x="197" y="280" width="207" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="185" y="289" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vv-lW-kgY">
-                                <rect key="frame" x="134" y="346" width="150" height="30"/>
+                                <rect key="frame" x="79" y="414" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="AFT-Uo-Ybi"/>
+                                    <constraint firstAttribute="width" constant="120" id="Wkg-bL-2al"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Accept">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCY-lz-7VG">
-                                <rect key="frame" x="316" y="346" width="150" height="30"/>
+                                <rect key="frame" x="371" y="414" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="f1c-Uu-Kdq"/>
+                                    <constraint firstAttribute="height" constant="35" id="sqy-BZ-4gs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Decline"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QXR-Dm-z03" firstAttribute="top" secondItem="Kmv-kg-PCo" secondAttribute="bottom" constant="30" id="233-Gx-RPk"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="top" secondItem="PCY-lz-7VG" secondAttribute="top" id="9qr-jn-sd7"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="leading" secondItem="Kmv-kg-PCo" secondAttribute="leading" id="DHO-Ca-ZoH"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="top" secondItem="QXR-Dm-z03" secondAttribute="bottom" constant="45" id="Hca-vt-F0D"/>
-                            <constraint firstItem="PCY-lz-7VG" firstAttribute="trailing" secondItem="Kmv-kg-PCo" secondAttribute="trailing" id="I0d-IJ-D9U"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="width" secondItem="PCY-lz-7VG" secondAttribute="width" id="Jrn-QH-jfQ"/>
-                            <constraint firstItem="QXR-Dm-z03" firstAttribute="centerX" secondItem="jig-eS-KDh" secondAttribute="centerX" id="OTD-lQ-j3D"/>
-                            <constraint firstItem="PCY-lz-7VG" firstAttribute="leading" secondItem="3Vv-lW-kgY" secondAttribute="trailing" constant="32" id="Uxo-oT-gU1"/>
-                            <constraint firstItem="Kmv-kg-PCo" firstAttribute="top" secondItem="uBe-2n-0zz" secondAttribute="bottom" constant="166" id="WdW-di-oH8"/>
-                            <constraint firstItem="Kmv-kg-PCo" firstAttribute="centerX" secondItem="jig-eS-KDh" secondAttribute="centerX" id="hhs-Wn-FzF"/>
-                            <constraint firstItem="PCY-lz-7VG" firstAttribute="top" secondItem="QXR-Dm-z03" secondAttribute="bottom" constant="45" id="ljH-Xx-Uxg"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="bottom" secondItem="PCY-lz-7VG" secondAttribute="bottom" id="p3I-0V-nGh"/>
-                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="height" secondItem="PCY-lz-7VG" secondAttribute="height" id="poW-Ny-RSZ"/>
+                            <constraint firstItem="QXR-Dm-z03" firstAttribute="centerY" secondItem="jig-eS-KDh" secondAttribute="centerY" id="2BC-eI-4gB"/>
+                            <constraint firstItem="QXR-Dm-z03" firstAttribute="leading" secondItem="3Vv-lW-kgY" secondAttribute="trailing" constant="-32" id="BCz-si-aqt"/>
+                            <constraint firstItem="QXR-Dm-z03" firstAttribute="centerX" secondItem="jig-eS-KDh" secondAttribute="centerX" id="Bwb-9q-0dw"/>
+                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="leading" secondItem="jig-eS-KDh" secondAttribute="leadingMargin" constant="15" id="DEb-c0-N4A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PCY-lz-7VG" secondAttribute="trailing" constant="15" id="GRj-RO-VnW"/>
+                            <constraint firstItem="3Vv-lW-kgY" firstAttribute="bottom" secondItem="PCY-lz-7VG" secondAttribute="bottom" id="GhA-nP-NqT"/>
+                            <constraint firstItem="MJq-s2-m9q" firstAttribute="top" secondItem="3Vv-lW-kgY" secondAttribute="bottom" constant="156" id="OPr-6V-hRa"/>
+                            <constraint firstItem="QXR-Dm-z03" firstAttribute="top" secondItem="uBe-2n-0zz" secondAttribute="bottom" constant="269" id="Tgx-xM-pvX"/>
+                            <constraint firstItem="Kmv-kg-PCo" firstAttribute="top" secondItem="uBe-2n-0zz" secondAttribute="bottom" constant="81" id="c23-cS-pYV"/>
+                            <constraint firstItem="Kmv-kg-PCo" firstAttribute="centerX" secondItem="jig-eS-KDh" secondAttribute="centerX" id="dPC-oF-off"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kmv-kg-PCo" secondAttribute="trailing" constant="30" id="dm2-aM-8HD"/>
+                            <constraint firstItem="PCY-lz-7VG" firstAttribute="leading" secondItem="3Vv-lW-kgY" secondAttribute="trailing" constant="142" id="hfC-kh-BzX"/>
+                            <constraint firstItem="Kmv-kg-PCo" firstAttribute="leading" secondItem="jig-eS-KDh" secondAttribute="leadingMargin" constant="30" id="ycL-fy-Ceo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BCz-si-aqt"/>
+                                <exclude reference="Tgx-xM-pvX"/>
+                                <exclude reference="hfC-kh-BzX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Vuq-eO-vxE"/>
                     <connections>
