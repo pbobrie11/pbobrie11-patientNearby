@@ -65,11 +65,35 @@ class ReceivePaymentViewController: UIViewController {
     }
     
     func confirmPayment(){
-        print("ACCEPT")
+        let state = "3"
+        
+        let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
+        var nameString: String = nameCheck as! String
+        
+        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        let recId = recIdString
+        let amt = " "
+        
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        
     }
     
     func declinePayment(){
-        print("DECLINE")
+        let state = "4"
+        
+        let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
+        var nameString: String = nameCheck as! String
+        
+        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        let recId = recIdString
+        let amt = " "
+        
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+
     }
 
     /*

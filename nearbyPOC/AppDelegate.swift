@@ -144,6 +144,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupStartStopButton()
     }
     
+    func paymentResponse(state: String, name: String, devId: String, recId: String, amt: String) {
+        
+        let message = state + "," + name + "," + devId + "," + recId + "," + amt
+        
+        if let messageMgr = self.messageMgr {
+            // Show the name in the message view title and set up the Stop button.
+            messageViewController.title = name
+            
+            // Publish the name to nearby devices.
+            let pubMessage: GNSMessage = GNSMessage(content: message.dataUsingEncoding(NSUTF8StringEncoding,
+                allowLossyConversion: true))
+            publication = messageMgr.publicationWithMessage(pubMessage)
+        }
+    }
+    
     /// Toggles the permission state of Nearby.
     func toggleNearbyPermission() {
         GNSPermission.setGranted(!GNSPermission.isGranted())
