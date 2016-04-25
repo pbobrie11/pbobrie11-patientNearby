@@ -138,7 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Stops publishing/subscribing.
     func stopSharing() {
         //uncomment if this doesn't work.
-       // publication = nil
+        publication = nil
         subscription = nil
         messageViewController.title = ""
         setupStartStopButton()
