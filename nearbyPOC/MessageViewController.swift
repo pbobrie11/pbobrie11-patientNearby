@@ -226,7 +226,7 @@ class MessageViewController: UITableViewController {
         } else {
             stopPublication()
         }
-        print("Ran")
+        
     }
     
     @IBAction func unwindToHere(segue: UIStoryboardSegue){
