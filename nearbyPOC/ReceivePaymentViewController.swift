@@ -45,10 +45,14 @@ class ReceivePaymentViewController: UIViewController {
         acceptButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
         acceptButton.layer.cornerRadius = 5
         acceptButton.layer.borderWidth = 1
+        acceptButton.addTarget(self, action: "confirmPayment", forControlEvents: .TouchUpInside)
+        acceptButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
         
         declineButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
         declineButton.layer.cornerRadius = 5
         declineButton.layer.borderWidth = 1
+        declineButton.addTarget(self, action: "declinePayment", forControlEvents: .TouchUpInside)
+        declineButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +60,17 @@ class ReceivePaymentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func backToTableView(){
+        self.performSegueWithIdentifier("unwind", sender: self)
+    }
     
+    func confirmPayment(){
+        print("ACCEPT")
+    }
+    
+    func declinePayment(){
+        print("DECLINE")
+    }
 
     /*
     // MARK: - Navigation
