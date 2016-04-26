@@ -100,7 +100,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Vuq-eO-vxE"/>
+                    <navigationItem key="navigationItem" id="Vuq-eO-vxE">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YGa-Gq-bOL">
+                            <connections>
+                                <action selector="cancelButton:" destination="r7w-9G-Egc" id="aFS-ba-hez"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="acceptButton" destination="3Vv-lW-kgY" id="K4N-CZ-zbW"/>
                         <outlet property="declineButton" destination="PCY-lz-7VG" id="Ok5-74-5g7"/>
@@ -111,7 +117,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDk-5F-3FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XfR-6J-UaA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2410" y="284"/>
+            <point key="canvasLocation" x="3222" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JcA-Q3-lz8">
@@ -130,6 +136,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ry2-9c-BM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-85" y="941"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VOe-uh-YLe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PPb-UX-Dp2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jbl-bV-FgX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r7w-9G-Egc" kind="relationship" relationship="rootViewController" id="2jl-Ol-0Ca"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeB-lN-1iW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="284"/>
         </scene>
     </scenes>
 </document>

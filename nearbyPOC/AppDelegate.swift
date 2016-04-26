@@ -10,6 +10,7 @@ import UIKit
 
 var myAPIKey = "AIzaSyDrpWmPjqzVOHZGpX3PC8gB94JTpSqwVCQ"
 var devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+let empty = " "
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -96,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Starts sharing with a randomized name.
     func startSharing() {
         let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
-        var nameString: String = nameCheck as! String
+        let nameString: String = nameCheck as! String
         
         var devName = UIDevice.currentDevice().identifierForVendor!.UUIDString
     
@@ -117,8 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let recID = " "
         let amt = " "
         
+        let sendMessage = Message(state: state, name: name, devId: devId, recId: empty, amt: empty)
+        let message = sendMessage.formMessageString()
         
-        let message = state + "," + name + "," + devId + "," + recID + "," + amt
         
         if let messageMgr = self.messageMgr {
             // Show the name in the message view title and set up the Stop button.
@@ -146,6 +148,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func paymentResponse(state: String, name: String, devId: String, recId: String, amt: String) {
         
+        let allowCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("payResponseBool")
+        var allow: String  = allowCheck as! String
+        
+        print(allow)
+        
+        if allow == "true" {
+        
         let message = state + "," + name + "," + devId + "," + recId + "," + amt
         
         if let messageMgr = self.messageMgr {
@@ -156,6 +165,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let pubMessage: GNSMessage = GNSMessage(content: message.dataUsingEncoding(NSUTF8StringEncoding,
                 allowLossyConversion: true))
             publication = messageMgr.publicationWithMessage(pubMessage)
+        }
+        } else {
+            //do nothing send, nothing
+            print("sendNewMessage == false")
         }
     }
     

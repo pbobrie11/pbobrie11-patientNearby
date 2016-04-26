@@ -16,9 +16,15 @@ class ReceivePaymentViewController: UIViewController {
     
     @IBOutlet weak var declineButton: UIButton!
     
+    @IBAction func cancelButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("unwind", sender: self)
+    }
+    
+    
     var recIdString : String = " "
     var providerString : String = " "
     var amtString : String = " "
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +71,10 @@ class ReceivePaymentViewController: UIViewController {
     }
     
     func confirmPayment(){
+        let allow = "true"
+        
+        NSUserDefaults.standardUserDefaults().setObject(allow, forKey: "payResponseBool")
+        
         let state = "3"
         
         let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
@@ -81,6 +91,8 @@ class ReceivePaymentViewController: UIViewController {
     }
     
     func declinePayment(){
+        NSUserDefaults.standardUserDefaults().setObject("true", forKey: "payResponseBool")
+        
         let state = "4"
         
         let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")

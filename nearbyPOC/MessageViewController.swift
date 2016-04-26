@@ -10,6 +10,9 @@ import UIKit
 import Foundation
 
 let cellIdentifier = "messageCell"
+var sendNewMessage : Bool = false
+
+var recIdString : String = " "
 
 
 class MessageViewController: UITableViewController {
@@ -66,6 +69,8 @@ class MessageViewController: UITableViewController {
     var titleMessage = "No Device ID found"
     var displayMessage = "Please Enter Your Device Name or ID"
     
+    let payMessageTitle = "Please Accept or Decline Charge"
+    let payMessageBody = " would like to charge you $"
     
     
     func checkForId(){
@@ -125,20 +130,33 @@ class MessageViewController: UITableViewController {
         let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
         
         if recId == myDevId {
+            
+            recIdString = devId
         //    present View for accepting / cancelling charge request
+            
+            
             let mainstoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let recVC : UIViewController = mainstoryboard.instantiateViewControllerWithIdentifier("receiveCharge")
             let navController : UINavigationController
             let navRoot = UINavigationController(rootViewController: recVC)
-            presentViewController(navRoot, animated: true, completion: nil)
+            presentNewView(navRoot)
             
             //set defaults for message values
             NSUserDefaults.standardUserDefaults().setObject(devId, forKey: "chargingDevId")
             NSUserDefaults.standardUserDefaults().setObject(provider, forKey: "provider")
             NSUserDefaults.standardUserDefaults().setObject(amt, forKey: "amt")
+ 
+            
+            //show alert with values
+           // paymentDecisionAlert(provider, amt: amt, recId: devId, devId: myDevId)
+            
         } else{
             //nothing?
         }
+    }
+    
+    func presentNewView(vc: UIViewController){
+        presentViewController(vc, animated: true, completion: nil)
     }
     
     
@@ -229,9 +247,61 @@ class MessageViewController: UITableViewController {
         
     }
     
+    func paymentDecisionAlert(provider: String, amt: String, recId: String, devId: String) {
+        let bodyMessage = provider + payMessageBody + amt
+        
+        let alertController = UIAlertController(title: payMessageTitle, message: bodyMessage, preferredStyle: .Alert)
+    
+        let accept = UIAlertAction(title: "Accept", style: .Default, handler: { (action) -> Void in
+            self.confirmPayment()
+        })
+        let decline = UIAlertAction(title: "Decline", style: .Cancel, handler: { (action) -> Void in
+            self.declinePayment()
+        })
+        alertController.addAction(accept)
+        alertController.addAction(decline)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+
     @IBAction func unwindToHere(segue: UIStoryboardSegue){
         
     }
+    
+    func confirmPayment(){
+        sendNewMessage = true
+        let state = "3"
+        
+        let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
+        var nameString: String = nameCheck as! String
+        
+        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        let recId = recIdString
+        let amt = " "
+        
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        
+    }
+    
+    func declinePayment(){
+        sendNewMessage = true
+        let state = "4"
+        
+        let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
+        var nameString: String = nameCheck as! String
+        
+        let devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        let recId = recIdString
+        let amt = " "
+        
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        
+    }
+
     
     
     
