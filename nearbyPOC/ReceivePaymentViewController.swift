@@ -85,8 +85,10 @@ class ReceivePaymentViewController: UIViewController {
         let recId = recIdString
         let amt = " "
         
+        let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
+        
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        delegate.startPublish(message)
         
     }
     
@@ -103,8 +105,10 @@ class ReceivePaymentViewController: UIViewController {
         let recId = recIdString
         let amt = " "
         
+        let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
+        
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        delegate.startPublish(message)
 
     }
 

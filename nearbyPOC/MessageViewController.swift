@@ -13,6 +13,9 @@ let cellIdentifier = "messageCell"
 var sendNewMessage : Bool = false
 
 var recIdString : String = " "
+var messageClass : Message!
+
+let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
 
 class MessageViewController: UITableViewController {
@@ -43,8 +46,7 @@ class MessageViewController: UITableViewController {
     }
     
     var namesArr = [String]()
-    var devArr = [String]()
-    var stateArr = [String]()
+    var recArr = [String]()
     
     let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
     
@@ -113,13 +115,12 @@ class MessageViewController: UITableViewController {
 
     
     func checkDevId(state: String, name: String, devId: String){
-        if devArr.contains(devId) {
+        if recArr.contains(devId) {
             print("repeat device")
-            print(devArr)
+            print(recArr)
         } else {
             namesArr.append(name.copy() as! String)
-            devArr.append(devId)
-            stateArr.append(state)
+            recArr.append(devId)
         }
             tableView.reloadData()
     }
@@ -131,7 +132,7 @@ class MessageViewController: UITableViewController {
         
         if recId == myDevId {
             
-            recIdString = devId
+            recIdString = recId
         //    present View for accepting / cancelling charge request
             
             
@@ -142,7 +143,7 @@ class MessageViewController: UITableViewController {
             presentNewView(navRoot)
             
             //set defaults for message values
-            NSUserDefaults.standardUserDefaults().setObject(devId, forKey: "chargingDevId")
+            NSUserDefaults.standardUserDefaults().setObject(recId, forKey: "chargingDevId")
             NSUserDefaults.standardUserDefaults().setObject(provider, forKey: "provider")
             NSUserDefaults.standardUserDefaults().setObject(amt, forKey: "amt")
  
@@ -160,24 +161,31 @@ class MessageViewController: UITableViewController {
     }
     
     
-    func addMessage(message: String!) {
-        let messageArray = message.componentsSeparatedByString(",")
+    func addMessage(message: String) {
         
-        print(namesArr)
+        var messageToFill = Message(state: " ", name: " ", devId: " ", recId: " ", amt: " ")
         
-        //pull all components of message from messageArray
-        var state = messageArray[0]
-        var name = messageArray[1]
-        var devId = messageArray[2]
-        var recId = messageArray[3]
-        var amt = messageArray[4]
+        print(myDevId)
+        let fullMessage = messageToFill.stringToObject(message)
         
+        let state = fullMessage.state
+        let name = fullMessage.name
+        let devId = myDevId
+        let recId = fullMessage.devId
+        let amt = fullMessage.amt
+
         
         //function to handle whether the device Id has been sent before, if so then overwrite the indexpath for those arrays
         
-        checkDevId(state, name: name, devId: devId)
+        //Add Message
         
-        checkRecId(recId, provider: name, amt: amt, devId: devId)
+        namesArr.append(name.copy() as! String)
+        recArr.append(devId)
+        
+        tableView.reloadData()
+        
+        
+        checkRecId(fullMessage.recId!, provider: fullMessage.name!, amt: fullMessage.amt!, devId: devId)
         
     }
     
@@ -187,9 +195,8 @@ class MessageViewController: UITableViewController {
         
         if let index = namesArr.indexOf(nameToRemove)
         {
-            stateArr.removeAtIndex(index)
             namesArr.removeAtIndex(index)
-            devArr.removeAtIndex(index)
+            recArr.removeAtIndex(index)
         }
         tableView.reloadData()
     }
@@ -227,7 +234,7 @@ class MessageViewController: UITableViewController {
     
     func startPublication(){
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.startPublish()
+        delegate.initialPublish()
         
     }
     
@@ -280,8 +287,10 @@ class MessageViewController: UITableViewController {
         let recId = recIdString
         let amt = " "
         
+        let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
+        
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        delegate.startPublish(message)
         
     }
     
@@ -297,8 +306,10 @@ class MessageViewController: UITableViewController {
         let recId = recIdString
         let amt = " "
         
+        let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
+        
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.paymentResponse(state, name: nameString, devId: devId, recId: recId, amt: amt)
+        delegate.startPublish(message)
         
     }
 

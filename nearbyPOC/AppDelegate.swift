@@ -108,8 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-    func startPublish() {
-        
+    func initialPublish(){
         // get Name, dev ID and rec ID and pass as message to other device
         var nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
         let name: String = nameCheck as! String
@@ -119,12 +118,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let amt = " "
         
         let sendMessage = Message(state: state, name: name, devId: devId, recId: empty, amt: empty)
-        let message = sendMessage.formMessageString()
+        // Show the name in the message view title and set up the Stop button.
+        messageViewController.title = name
         
+        startPublish(sendMessage)
+    }
+    
+    func startPublish(message: Message) {
+        
+        let message = message.formMessageString()
+        
+        publication = nil
         
         if let messageMgr = self.messageMgr {
-            // Show the name in the message view title and set up the Stop button.
-            messageViewController.title = name
             
             // Publish the name to nearby devices.
             let pubMessage: GNSMessage = GNSMessage(content: message.dataUsingEncoding(NSUTF8StringEncoding,
@@ -192,7 +198,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // Subscribe to messages from nearby devices and display them in the message view.
             subscription = messageMgr.subscriptionWithMessageFoundHandler({[unowned self] (message: GNSMessage!) -> Void in
-                self.messageViewController.addMessage(String(data: message.content, encoding:NSUTF8StringEncoding))
+                self.messageViewController.addMessage(String(data: message.content, encoding:NSUTF8StringEncoding)!)
                 }, messageLostHandler: {[unowned self](message: GNSMessage!) -> Void in
                     self.messageViewController.removeMessage(String(data: message.content, encoding: NSUTF8StringEncoding))
  

@@ -44,7 +44,7 @@ class Message {
         return fullMessage
     }
     
-    func stringToObject(message: String) -> AnyObject {
+    func stringToObject(message: String) -> Message {
         let messageArray = message.componentsSeparatedByString(",")
         
         var state = messageArray[0]
