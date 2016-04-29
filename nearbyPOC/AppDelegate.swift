@@ -12,10 +12,14 @@ var myAPIKey = "AIzaSyDrpWmPjqzVOHZGpX3PC8gB94JTpSqwVCQ"
 var devId = UIDevice.currentDevice().identifierForVendor!.UUIDString
 let empty = " "
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+
+    var allowInitial : Bool = true
+    var allowPaymentResponse : Bool = false
     
     /**
     * @property
@@ -100,13 +104,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nameString: String = nameCheck as! String
         
         var devName = UIDevice.currentDevice().identifierForVendor!.UUIDString
-    
+        allowInitial = true
         
         startSharingWithName(nameString, dev: devName)
         setupStartStopButton()
-        
-    
     }
+    
+    func refreshPub() {
+        publication = nil
+    }
+    
+    func checkValidity (message: Message) {
+        if message.state == "1" && allowInitial == true {
+            allowInitial = false
+            refreshPub()
+            startPublish(message)
+        } else if message.state == "3" || message.state == "4" && allowPaymentResponse == true {
+            allowInitial = false
+            allowPaymentResponse = false
+            refreshPub()
+            startPublish(message)
+        }
+    }
+    
     
     func initialPublish(){
         // get Name, dev ID and rec ID and pass as message to other device
@@ -121,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Show the name in the message view title and set up the Stop button.
         messageViewController.title = name
         
-        startPublish(sendMessage)
+        checkValidity(sendMessage)
     }
     
     func startPublish(message: Message) {

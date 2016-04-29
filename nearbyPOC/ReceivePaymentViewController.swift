@@ -71,9 +71,8 @@ class ReceivePaymentViewController: UIViewController {
     }
     
     func confirmPayment(){
-        let allow = "true"
         
-        NSUserDefaults.standardUserDefaults().setObject(allow, forKey: "payResponseBool")
+
         
         let state = "3"
         
@@ -85,15 +84,15 @@ class ReceivePaymentViewController: UIViewController {
         let recId = recIdString
         let amt = " "
         
-        let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
+        let message = Message(state: state, name: nameString, devId: devId, recId: recId, amt: amt)
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.startPublish(message)
+        delegate.allowPaymentResponse = true
+        delegate.checkValidity(message)
         
     }
     
     func declinePayment(){
-        NSUserDefaults.standardUserDefaults().setObject("true", forKey: "payResponseBool")
         
         let state = "4"
         
@@ -108,7 +107,8 @@ class ReceivePaymentViewController: UIViewController {
         let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.startPublish(message)
+        delegate.allowPaymentResponse = true
+        delegate.checkValidity(message)
 
     }
 

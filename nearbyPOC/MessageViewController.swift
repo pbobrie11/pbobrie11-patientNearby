@@ -143,7 +143,7 @@ class MessageViewController: UITableViewController {
             presentNewView(navRoot)
             
             //set defaults for message values
-            NSUserDefaults.standardUserDefaults().setObject(recId, forKey: "chargingDevId")
+            NSUserDefaults.standardUserDefaults().setObject(devId, forKey: "chargingDevId")
             NSUserDefaults.standardUserDefaults().setObject(provider, forKey: "provider")
             NSUserDefaults.standardUserDefaults().setObject(amt, forKey: "amt")
  
@@ -170,8 +170,8 @@ class MessageViewController: UITableViewController {
         
         let state = fullMessage.state
         let name = fullMessage.name
-        let devId = myDevId
-        let recId = fullMessage.devId
+        let devId = fullMessage.devId
+        let recId = fullMessage.recId
         let amt = fullMessage.amt
 
         
@@ -185,7 +185,7 @@ class MessageViewController: UITableViewController {
         tableView.reloadData()
         
         
-        checkRecId(fullMessage.recId!, provider: fullMessage.name!, amt: fullMessage.amt!, devId: devId)
+        checkRecId(recId!, provider: name, amt: amt!, devId: devId)
         
     }
     
