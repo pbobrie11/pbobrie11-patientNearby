@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    var allowInitial : Bool = true
-    var allowPaymentResponse : Bool = false
+    var controlState : Int = 0
+    var sendInitial : Bool = false
     
     /**
     * @property
@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController = UINavigationController(rootViewController: messageViewController)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("checkControlState"), userInfo: nil, repeats: true)
         
         //setup receive charge view
         receivePaymentViewController = ReceivePaymentViewController()
@@ -104,7 +106,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nameString: String = nameCheck as! String
         
         var devName = UIDevice.currentDevice().identifierForVendor!.UUIDString
-        allowInitial = true
         
         startSharingWithName(nameString, dev: devName)
         setupStartStopButton()
@@ -114,14 +115,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         publication = nil
     }
     
+    func resetBools(){
+        //set values for Bools for determining messages
+        controlState = 0
+        print("NEW LOAD")
+    }
+    
     func checkValidity (message: Message) {
-        if message.state == "1" && allowInitial == true {
-            allowInitial = false
+        if message.state == "1" && controlState == 0 {
             refreshPub()
             startPublish(message)
-        } else if message.state == "3" || message.state == "4" && allowPaymentResponse == true {
-            allowInitial = false
-            allowPaymentResponse = false
+        } else if message.state == "3" || message.state == "4" && controlState == 1 {
             refreshPub()
             startPublish(message)
         }
@@ -142,6 +146,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         messageViewController.title = name
         
         checkValidity(sendMessage)
+    }
+    
+    func checkControlState() {
+        
+        print("The Control State is:")
+        print(controlState)
+        if controlState == 2 {
+            refreshPub()
+            initialPublish()
+            controlState = 0
+        }
     }
     
     func startPublish(message: Message) {

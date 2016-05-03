@@ -18,6 +18,8 @@ class ReceivePaymentViewController: UIViewController {
     
     @IBAction func cancelButton(sender: AnyObject) {
         self.performSegueWithIdentifier("unwind", sender: self)
+        var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.controlState = 0
     }
     
     
@@ -28,6 +30,9 @@ class ReceivePaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.controlState = 1
         
         messageLabel.sizeToFit()
         
@@ -87,7 +92,6 @@ class ReceivePaymentViewController: UIViewController {
         let message = Message(state: state, name: nameString, devId: devId, recId: recId, amt: amt)
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.allowPaymentResponse = true
         delegate.checkValidity(message)
         
     }
@@ -107,7 +111,6 @@ class ReceivePaymentViewController: UIViewController {
         let message = Message(state: state, name: nameString, devId: devId, recId: recIdString, amt: amt)
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.allowPaymentResponse = true
         delegate.checkValidity(message)
 
     }

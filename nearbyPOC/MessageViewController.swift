@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 
 let cellIdentifier = "messageCell"
-var sendNewMessage : Bool = false
 
 var recIdString : String = " "
 var messageClass : Message!
@@ -48,6 +47,8 @@ class MessageViewController: UITableViewController {
     var namesArr = [String]()
     var recArr = [String]()
     
+    var messArray = [Message]()
+    
     let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
     
     //variable to handle name of device / provider
@@ -59,9 +60,11 @@ class MessageViewController: UITableViewController {
         tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
         checkForId()
         
-    var checkTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("determinePubStatus"), userInfo: nil, repeats: true)
-        print(namesArr)
-
+   // var checkTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("determinePubStatus"), userInfo: nil, repeats: true)
+    
+        
+        var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.resetBools()
                 }
 
 
@@ -103,15 +106,6 @@ class MessageViewController: UITableViewController {
         
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    func showLinkAlert() {
-        let alertController = UIAlertController(title: "Error", message: "Please Select Another Provider", preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "Ok", style: .Cancel, handler: { (action) -> Void in
-        })
-        alertController.addAction(ok)
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
 
     
     func checkDevId(state: String, name: String, devId: String){
@@ -165,7 +159,6 @@ class MessageViewController: UITableViewController {
         
         var messageToFill = Message(state: " ", name: " ", devId: " ", recId: " ", amt: " ")
         
-        print(myDevId)
         let fullMessage = messageToFill.stringToObject(message)
         
         let state = fullMessage.state
@@ -173,6 +166,8 @@ class MessageViewController: UITableViewController {
         let devId = fullMessage.devId
         let recId = fullMessage.recId
         let amt = fullMessage.amt
+        
+        determinePubStatus(fullMessage.state)
 
         
         //function to handle whether the device Id has been sent before, if so then overwrite the indexpath for those arrays
@@ -184,6 +179,7 @@ class MessageViewController: UITableViewController {
         
         tableView.reloadData()
         
+        messArray.append(fullMessage)
         
         checkRecId(recId!, provider: name, amt: amt!, devId: devId)
         
@@ -217,20 +213,7 @@ class MessageViewController: UITableViewController {
         return cell
     }
     
-    func checkURL(url: String?){
-        if url != nil {
-            openURL(url!)
-        } else {
-            showLinkAlert()
-        }
-    }
     
-    func openURL(url: String){
-        if let openURL = NSURL(string: url) {
-        UIApplication.sharedApplication().openURL(openURL)
-        print(url)
-        }
-    }
     
     func startPublication(){
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -243,12 +226,12 @@ class MessageViewController: UITableViewController {
         delegate.stopPublish()
     }
     
-    func determinePubStatus(){
+    func determinePubStatus(state: String){
         let count = namesArr.count
         
-        if count > 0 {
+        if state == "1" {
             startPublication()
-        } else {
+        } else if count == 0{
             stopPublication()
         }
         
@@ -276,7 +259,6 @@ class MessageViewController: UITableViewController {
     }
     
     func confirmPayment(){
-        sendNewMessage = true
         let state = "3"
         
         let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
@@ -295,7 +277,6 @@ class MessageViewController: UITableViewController {
     }
     
     func declinePayment(){
-        sendNewMessage = true
         let state = "4"
         
         let nameCheck: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("name")
@@ -324,7 +305,13 @@ class MessageViewController: UITableViewController {
         let indexPath = indexPath.row
         let labelText = namesArr[indexPath]
         let url: String? = provDict[labelText]
-        checkURL(url)
+        
+        print(messArray[indexPath].state)
+        print(messArray[indexPath].name)
+        print(messArray[indexPath].devId)
+        print(messArray[indexPath].recId)
+        print(messArray[indexPath].amt)
+
     }
 
     
