@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483988011.476266"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483989932.439474"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "startSharing()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484767308.131711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nearbyPOC/MessageViewController.swift"
+            timestampString = "484767308.131711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "MessageViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,27 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "determinePubStatus(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "checkDevId(_:name:devId:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483989932.439474"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "addMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "checkRecId(_:provider:amt:devId:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "checkRecId(_:provider:amt:devId:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "checkRecId(_:provider:amt:devId:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "MessageViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "stopPublish()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483989932.439474"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "stopSharing()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483989932.439474"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "setupStartStopButton()"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "removeMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "stopPublish()"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,28 +378,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484767308.131711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "MessageViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "determinePubStatus(_:)"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "stopPublication()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -410,11 +394,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484767308.131711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "stopPublication()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nearbyPOC/MessageViewController.swift"
+            timestampString = "484767308.131711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "determinePubStatus(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "startSharingWithName(_:dev:)"
             landmarkType = "5">
             <Locations>
@@ -489,11 +489,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "startSharingWithName(_:dev:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -521,11 +521,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "addMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -537,11 +537,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "addMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -553,11 +553,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "startPublish(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -569,11 +569,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "startPublish(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -585,11 +585,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "startPublish(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -601,11 +601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483999778.761965"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "addMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -613,7 +613,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/ReceivePaymentViewController.swift"
@@ -633,11 +633,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -645,15 +645,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483989932.439474"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "checkValidity(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -665,11 +665,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/MessageViewController.swift"
-            timestampString = "483989744.43607"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -681,11 +681,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "checkControlState()"
             landmarkType = "5">
          </BreakpointContent>
@@ -697,11 +697,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/AppDelegate.swift"
-            timestampString = "483994922.055434"
+            timestampString = "484765860.903928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "initialPublish()"
             landmarkType = "5">
          </BreakpointContent>
@@ -709,7 +709,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nearbyPOC/ReceivePaymentViewController.swift"

@@ -21,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var controlState : Int = 0
     var sendInitial : Bool = false
     
+    //create UI Color used in CC App
+    let uglyBlue = UIColor(colorLiteralRed: 43/255, green: 107/255, blue: 125/255, alpha: 1)
+    
+    let sea = UIColor(colorLiteralRed: 55/255, green: 139/255, blue: 127/255, alpha: 1)
+    
+    //the unattainable font
+    let openSans = UIFont(name: "OpenSans-Semibold", size: 18)
+    
     /**
     * @property
     * This class lets you check the permission state of Nearby for the app on the current device.  If
@@ -50,6 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("checkControlState"), userInfo: nil, repeats: true)
+        
+        //look of nav controller
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : uglyBlue, NSFontAttributeName : openSans!]
+        navController.navigationBar.barTintColor = UIColor.whiteColor()
         
         //setup receive charge view
         receivePaymentViewController = ReceivePaymentViewController()

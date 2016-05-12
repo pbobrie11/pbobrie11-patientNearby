@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1421B2031CE4EFD800DB6031 /* navController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421B2021CE4EFD800DB6031 /* navController.swift */; };
+		1421B2051CE4F0EF00DB6031 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1421B2041CE4F0DF00DB6031 /* OpenSans-Semibold.ttf */; };
 		14553DC01CCFFC6A00FF9B8A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14553DBF1CCFFC6A00FF9B8A /* Message.swift */; };
 		14A536851CCA786200C299AC /* ReceivePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A536841CCA786200C299AC /* ReceivePaymentViewController.swift */; };
 		14A6E3621CAC5AB600C27E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6E3611CAC5AB600C27E36 /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1421B2021CE4EFD800DB6031 /* navController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navController.swift; sourceTree = "<group>"; };
+		1421B2041CE4F0DF00DB6031 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		14553DBF1CCFFC6A00FF9B8A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		14A536841CCA786200C299AC /* ReceivePaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivePaymentViewController.swift; sourceTree = "<group>"; };
 		14A6E35E1CAC5AB600C27E36 /* nearbyPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nearbyPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +106,13 @@
 				14EEC3C21CC6AD9C000B5C87 /* Settings.swift */,
 				14A6E3821CAC67EB00C27E36 /* getBridgingHeader.m */,
 				14A6E3631CAC5AB600C27E36 /* MessageViewController.swift */,
+				1421B2021CE4EFD800DB6031 /* navController.swift */,
 				14A6E3651CAC5AB600C27E36 /* Main.storyboard */,
 				14A6E3681CAC5AB600C27E36 /* Assets.xcassets */,
 				14A6E36A1CAC5AB600C27E36 /* LaunchScreen.storyboard */,
 				14A6E36D1CAC5AB600C27E36 /* Info.plist */,
 				14A6E3811CAC67EB00C27E36 /* nearbyPOC-Bridging-Header.h */,
+				1421B2041CE4F0DF00DB6031 /* OpenSans-Semibold.ttf */,
 			);
 			path = nearbyPOC;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				14ED70CF1CB6EA5900A8001E /* cc.json in Resources */,
 				14A6E3691CAC5AB600C27E36 /* Assets.xcassets in Resources */,
 				14A6E3671CAC5AB600C27E36 /* Main.storyboard in Resources */,
+				1421B2051CE4F0EF00DB6031 /* OpenSans-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 				14553DC01CCFFC6A00FF9B8A /* Message.swift in Sources */,
 				14EEC3C31CC6AD9C000B5C87 /* Settings.swift in Sources */,
 				14A6E3621CAC5AB600C27E36 /* AppDelegate.swift in Sources */,
+				1421B2031CE4EFD800DB6031 /* navController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

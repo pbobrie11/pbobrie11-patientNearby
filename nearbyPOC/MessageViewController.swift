@@ -16,6 +16,14 @@ var messageClass : Message!
 
 let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
+//create UI Color used in CC App
+let uglyBlue = UIColor(colorLiteralRed: 43/255, green: 107/255, blue: 125/255, alpha: 1)
+
+let sea = UIColor(colorLiteralRed: 55/255, green: 139/255, blue: 127/255, alpha: 1)
+
+let lightBlueGrey = UIColor(colorLiteralRed: 213/255, green: 232/255, blue: 236/255, alpha: 1)
+
+let openSans = UIFont(name: "OpenSans-Semibold", size: 16)
 
 class MessageViewController: UITableViewController {
     /**
@@ -28,6 +36,8 @@ class MessageViewController: UITableViewController {
         }
         set(leftBarButton) {
             navigationItem.leftBarButtonItem = leftBarButton
+            navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: openSans!], forState: .Normal)
+            navigationItem.leftBarButtonItem?.tintColor = uglyBlue
         }
     }
     
@@ -41,6 +51,8 @@ class MessageViewController: UITableViewController {
         }
         set(rightBarButton) {
             navigationItem.rightBarButtonItem = rightBarButton
+            navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: openSans!], forState: .Normal)
+            navigationItem.rightBarButtonItem?.tintColor = uglyBlue
         }
     }
     
@@ -210,6 +222,28 @@ class MessageViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         cell.textLabel?.text = namesArr[indexPath.row]
+        
+        let bounds = UIScreen.mainScreen().bounds
+        let width = bounds.size.width
+        let arrowPos = width - 15
+        
+        var customColorView : UIView
+        
+        print(arrowPos)
+        
+        var frame = CGRect(x: 285,y: 4,width: 40,height: 40)
+        var imageView = UIImageView(frame: frame)
+        imageView.image = UIImage(named: "cellArrow")
+        
+        cell.textLabel?.textColor = uglyBlue
+        
+        if messArray.isEmpty {
+            cell.willRemoveSubview(imageView)
+        } else {
+            cell.addSubview(imageView)
+        }
+
+    
         return cell
     }
     
