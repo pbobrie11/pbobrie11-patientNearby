@@ -1,4 +1,5 @@
 PODS:
+  - ABPadLockScreen (3.4.1)
   - GoogleInterchangeUtilities (1.2.0):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleNetworkingUtilities (1.2.0):
@@ -12,9 +13,11 @@ PODS:
     - GoogleUtilities (~> 1.0)
 
 DEPENDENCIES:
+  - ABPadLockScreen
   - NearbyMessages
 
 SPEC CHECKSUMS:
+  ABPadLockScreen: 4185a25c40291946071aa12908c0d0ad242bc420
   GoogleInterchangeUtilities: 427382e42d8a340038bec37c6fdfd316e14b5fa2
   GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
   GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7

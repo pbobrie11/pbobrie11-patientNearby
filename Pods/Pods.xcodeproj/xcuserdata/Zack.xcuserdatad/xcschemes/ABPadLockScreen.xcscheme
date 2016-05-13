@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8297984A1D01DA43DC0AF4C7'
-               BlueprintName = 'Pods-nearbyPOC'
+               BlueprintIdentifier = '1F706350CC3D845352880136'
+               BlueprintName = 'ABPadLockScreen'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_nearbyPOC.framework'>
+               BuildableName = 'ABPadLockScreen.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

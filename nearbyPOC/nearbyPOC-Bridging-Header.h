@@ -4,5 +4,9 @@
 
 //according to the Google 'Getting Started' site, this is the importing that needs to be done by the bridging header
 
-
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <GNSMessages.h>
+
+
+

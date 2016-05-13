@@ -4,9 +4,9 @@ use_frameworks!
 
 target 'nearbyPOC' do
 pod 'NearbyMessages'
+pod ‘ABPadLockScreen’
 end
 
 target 'nearbyPOC' do
-pod 'SwiftyJSON'
 end
 

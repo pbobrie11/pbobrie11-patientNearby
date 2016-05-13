@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import ABPadLockScreen
 
-class ReceivePaymentViewController: UIViewController {
+class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewControllerDelegate, ABPadLockScreenViewControllerDelegate {
+    
+    private(set) var thePin: String = "2580"
 
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -64,6 +67,18 @@ class ReceivePaymentViewController: UIViewController {
         declineButton.layer.borderWidth = 1
         declineButton.addTarget(self, action: "declinePayment", forControlEvents: .TouchUpInside)
         declineButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
+        
+        ABPadLockScreenView.appearance().backgroundColor = UIColor(hue:0.61, saturation:0.55, brightness:0.64, alpha:1)
+        
+        ABPadLockScreenView.appearance().labelColor = UIColor.whiteColor()
+        
+        let buttonLineColor = UIColor(red: 229/255, green: 180/255, blue: 46/255, alpha: 1)
+        ABPadButton.appearance().backgroundColor = UIColor.clearColor()
+        ABPadButton.appearance().borderColor = buttonLineColor
+        ABPadButton.appearance().selectedColor = buttonLineColor
+        ABPinSelectionView.appearance().selectedColor = buttonLineColor
+        
+        checkAmt()
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,9 +90,30 @@ class ReceivePaymentViewController: UIViewController {
         self.performSegueWithIdentifier("unwind", sender: self)
     }
     
-    func confirmPayment(){
+    func checkAmt() {
+        var amt : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("amt")
+        var amtString: String = " "
         
+        if amt == nil {
+            
+        } else {
+            amtString = (amt as? String)!
+        }
 
+        var amount = Double(amtString)
+        
+        
+        if amount >= 500 {
+            let lockScreen = ABPadLockScreenViewController(delegate: self, complexPin: false)
+            lockScreen.setAllowedAttempts(3)
+            lockScreen.modalPresentationStyle = UIModalPresentationStyle.FullScreen
+            lockScreen.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+            
+            presentViewController(lockScreen, animated: true, completion: nil)
+        }
+    }
+    
+    func confirmPayment(){
         
         let state = "3"
         
@@ -93,7 +129,6 @@ class ReceivePaymentViewController: UIViewController {
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.checkValidity(message)
-        
     }
     
     func declinePayment(){
@@ -113,6 +148,29 @@ class ReceivePaymentViewController: UIViewController {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.checkValidity(message)
 
+    }
+    
+    func unlockWasCancelledForSetupViewController(padLockScreenViewController: ABPadLockScreenAbstractViewController!) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    //MARK: Lock Screen Delegate
+    func padLockScreenViewController(padLockScreenViewController: ABPadLockScreenViewController!, validatePin pin: String!) -> Bool {
+        print("Validating Pin \(pin)")
+        return thePin == pin
+    }
+    
+    func unlockWasSuccessfulForPadLockScreenViewController(padLockScreenViewController: ABPadLockScreenViewController!) {
+        print("Unlock Successful!")
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func unlockWasUnsuccessful(falsePin: String!, afterAttemptNumber attemptNumber: Int, padLockScreenViewController: ABPadLockScreenViewController!) {
+        print("Failed Attempt \(attemptNumber) with incorrect pin \(falsePin)")
+    }
+    
+    func unlockWasCancelledForPadLockScreenViewController(padLockScreenViewController: ABPadLockScreenViewController!) {
+        print("Unlock Cancled")
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
