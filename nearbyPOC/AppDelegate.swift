@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Sets up the right bar button to start or stop sharing, depending on current sharing mode.
     func setupStartStopButton() {
         let isListening = (subscription != nil)
-        messageViewController.rightBarButton = UIBarButtonItem(title: isListening ? "Stop Listening" : "Start Listening",
+        messageViewController.rightBarButton = UIBarButtonItem(title: isListening ? "Stop" : "Start",
             style: UIBarButtonItemStyle.Bordered,
             target: self, action: isListening ? "stopSharing" :  "startSharing")
     }

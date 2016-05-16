@@ -30,6 +30,7 @@ class MessageViewController: UITableViewController {
     * @property
     * The left button to use in the nav bar.
     */
+    
     var leftBarButton: UIBarButtonItem! {
         get {
             return navigationItem.leftBarButtonItem
@@ -73,7 +74,9 @@ class MessageViewController: UITableViewController {
         checkForId()
         
    // var checkTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("determinePubStatus"), userInfo: nil, repeats: true)
-    
+        let logo = UIImage(named: "logo")
+        let logoImage = UIImageView(image: logo)
+        self.navigationItem.titleView = logoImage
         
         var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.resetBools()

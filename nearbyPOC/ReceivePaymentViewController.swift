@@ -19,6 +19,8 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     
     @IBOutlet weak var declineButton: UIButton!
     
+    @IBOutlet weak var actionLabel: UILabel!
+    
     @IBAction func cancelButton(sender: AnyObject) {
         self.performSegueWithIdentifier("unwind", sender: self)
         var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -36,10 +38,14 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: openSans!], forState: .Normal)
+        navigationItem.leftBarButtonItem?.tintColor = uglyBlue
+        
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.controlState = 1
         
         messageLabel.sizeToFit()
+        messageLabel.textColor = uglyBlue
         
         let recId : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("chargingDevId")
         recIdString = recId as! String
@@ -52,19 +58,19 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         amtString = amt as! String
         var attributedString = NSMutableAttributedString(string: amtString)
         
-        
+        actionLabel.textColor = uglyBlue
         
         // Do any additional setup after loading the view.
         messageLabel.text = providerString + " would like to charge you $" + amtString
         
         //button formatting
-        acceptButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
+        acceptButton.backgroundColor = sea
         acceptButton.layer.cornerRadius = 5
         acceptButton.layer.borderWidth = 1
         acceptButton.addTarget(self, action: "pinConfirm", forControlEvents: .TouchUpInside)
     //    acceptButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
         
-        declineButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
+        declineButton.backgroundColor = sea
         declineButton.layer.cornerRadius = 5
         declineButton.layer.borderWidth = 1
         declineButton.addTarget(self, action: "declinePayment", forControlEvents: .TouchUpInside)
@@ -80,6 +86,10 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         ABPadButton.appearance().selectedColor = buttonLineColor
         ABPinSelectionView.appearance().selectedColor = buttonLineColor
         ABPadButton.appearance().textColor = uglyBlue
+        
+        let logo = UIImage(named: "logo")
+        let logoImage = UIImageView(image: logo)
+        self.navigationItem.titleView = logoImage
         
         checkAmt()
     }
@@ -127,6 +137,8 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.checkValidity(message)
+        
+        backToTableView()
     }
     
     func pinConfirm(){
@@ -175,7 +187,6 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         print("Unlock Successful!")
         confirmPayment()
         dismissViewControllerAnimated(true, completion: nil)
-        backToTableView()
     }
     
     func unlockWasUnsuccessful(falsePin: String!, afterAttemptNumber attemptNumber: Int, padLockScreenViewController: ABPadLockScreenViewController!) {
