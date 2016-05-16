@@ -92,7 +92,7 @@
 {
     _borderColor = [UIColor whiteColor];
     _selectedColor = [UIColor lightGrayColor];
-    _textColor = [UIColor whiteColor];
+    _textColor = [UIColor blackColor];
     _hightlightedTextColor = [UIColor whiteColor];
 	
 	static NSString* fontName = @"HelveticaNeue-Thin";
@@ -179,7 +179,7 @@
 - (UILabel *)standardLabel
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.textColor = [UIColor whiteColor];
+    label.textColor = [UIColor blackColor];
     label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
 	label.minimumScaleFactor = 1.0;

@@ -30,6 +30,8 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     var providerString : String = " "
     var amtString : String = " "
     
+    var needPin : Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +61,8 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         acceptButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
         acceptButton.layer.cornerRadius = 5
         acceptButton.layer.borderWidth = 1
-        acceptButton.addTarget(self, action: "confirmPayment", forControlEvents: .TouchUpInside)
-        acceptButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
+        acceptButton.addTarget(self, action: "pinConfirm", forControlEvents: .TouchUpInside)
+    //    acceptButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
         
         declineButton.backgroundColor = UIColor(red: 32.0/255.0, green: 157.0/255.0, blue: 139.0/255.0, alpha: 1.0)
         declineButton.layer.cornerRadius = 5
@@ -68,15 +70,16 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         declineButton.addTarget(self, action: "declinePayment", forControlEvents: .TouchUpInside)
         declineButton.addTarget(self, action: "backToTableView", forControlEvents: .TouchUpInside)
         
-        ABPadLockScreenView.appearance().backgroundColor = UIColor(hue:0.61, saturation:0.55, brightness:0.64, alpha:1)
+        ABPadLockScreenView.appearance().backgroundColor = UIColor.whiteColor()
         
-        ABPadLockScreenView.appearance().labelColor = UIColor.whiteColor()
+        ABPadLockScreenView.appearance().labelColor = uglyBlue
         
-        let buttonLineColor = UIColor(red: 229/255, green: 180/255, blue: 46/255, alpha: 1)
+        let buttonLineColor = sea
         ABPadButton.appearance().backgroundColor = UIColor.clearColor()
         ABPadButton.appearance().borderColor = buttonLineColor
         ABPadButton.appearance().selectedColor = buttonLineColor
         ABPinSelectionView.appearance().selectedColor = buttonLineColor
+        ABPadButton.appearance().textColor = uglyBlue
         
         checkAmt()
     }
@@ -104,12 +107,7 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         
         
         if amount >= 500 {
-            let lockScreen = ABPadLockScreenViewController(delegate: self, complexPin: false)
-            lockScreen.setAllowedAttempts(3)
-            lockScreen.modalPresentationStyle = UIModalPresentationStyle.FullScreen
-            lockScreen.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-            
-            presentViewController(lockScreen, animated: true, completion: nil)
+            needPin = true
         }
     }
     
@@ -129,6 +127,20 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
         
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.checkValidity(message)
+    }
+    
+    func pinConfirm(){
+        if needPin == true {
+            let lockScreen = ABPadLockScreenViewController(delegate: self, complexPin: false)
+            lockScreen.setAllowedAttempts(3)
+            lockScreen.modalPresentationStyle = UIModalPresentationStyle.FullScreen
+            lockScreen.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+            
+            presentViewController(lockScreen, animated: true, completion: nil)
+        } else {
+            confirmPayment()
+        }
+    
     }
     
     func declinePayment(){
@@ -161,7 +173,9 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     
     func unlockWasSuccessfulForPadLockScreenViewController(padLockScreenViewController: ABPadLockScreenViewController!) {
         print("Unlock Successful!")
+        confirmPayment()
         dismissViewControllerAnimated(true, completion: nil)
+        backToTableView()
     }
     
     func unlockWasUnsuccessful(falsePin: String!, afterAttemptNumber attemptNumber: Int, padLockScreenViewController: ABPadLockScreenViewController!) {
@@ -169,7 +183,7 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     }
     
     func unlockWasCancelledForPadLockScreenViewController(padLockScreenViewController: ABPadLockScreenViewController!) {
-        print("Unlock Cancled")
+        print("Unlock Cancelled")
         dismissViewControllerAnimated(true, completion: nil)
     }
 
