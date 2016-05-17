@@ -55,6 +55,7 @@
         _lockedOutString = NSLocalizedString(@"You have been locked out.", @"");
         _pluralAttemptsLeftString = NSLocalizedString(@"attempts left", @"");
         _singleAttemptLeftString = NSLocalizedString(@"attempt left", @"");
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

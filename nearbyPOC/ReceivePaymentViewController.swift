@@ -24,7 +24,7 @@ class ReceivePaymentViewController: UIViewController, ABPadLockScreenSetupViewCo
     @IBAction func cancelButton(sender: AnyObject) {
         self.performSegueWithIdentifier("unwind", sender: self)
         var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.controlState = 0
+        delegate.controlState = 2
     }
     
     

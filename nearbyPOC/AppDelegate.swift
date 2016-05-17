@@ -134,12 +134,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func checkValidity (message: Message) {
+        var whatsTheState = message.state
+        print(whatsTheState)
+        print(controlState)
         if message.state == "1" && controlState == 0 {
             refreshPub()
             startPublish(message)
         } else if message.state == "3" || message.state == "4" && controlState == 1 {
             refreshPub()
             startPublish(message)
+            controlState = 0
         }
     }
     
@@ -169,6 +173,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             initialPublish()
             controlState = 0
         }
+        
     }
     
     func startPublish(message: Message) {

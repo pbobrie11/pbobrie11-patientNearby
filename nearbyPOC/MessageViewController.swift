@@ -134,7 +134,7 @@ class MessageViewController: UITableViewController {
             tableView.reloadData()
     }
     
-    func checkRecId(recId: String, provider: String, amt: String, devId: String) {
+    func checkRecId(recId: String, provider: String, amt: String, devId: String, state: String) {
        // let alertController = UIAlertController(title: "Payment", message: provider + " would like to receive payment", preferredStyle: .Alert)
         
         let myDevId = UIDevice.currentDevice().identifierForVendor!.UUIDString
@@ -160,8 +160,9 @@ class MessageViewController: UITableViewController {
             //show alert with values
            // paymentDecisionAlert(provider, amt: amt, recId: devId, devId: myDevId)
             
-        } else{
-            //nothing?
+        } else if state == "1"{
+            let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+            delegate?.initialPublish()
         }
     }
     
@@ -196,7 +197,7 @@ class MessageViewController: UITableViewController {
         
         messArray.append(fullMessage)
         
-        checkRecId(recId!, provider: name, amt: amt!, devId: devId)
+        checkRecId(recId!, provider: name, amt: amt!, devId: devId, state: state)
         
     }
     
