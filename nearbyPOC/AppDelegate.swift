@@ -226,7 +226,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         } else {
             //do nothing send, nothing
-            print("sendNewMessage == false")
+            print("sendNewMessage = false")
         }
     }
     

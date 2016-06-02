@@ -25,6 +25,8 @@ let lightBlueGrey = UIColor(colorLiteralRed: 213/255, green: 232/255, blue: 236/
 
 let openSans = UIFont(name: "OpenSans-Semibold", size: 16)
 
+let openSansLarge = UIFont(name: "OpenSans-Semibold", size: 18)
+
 class MessageViewController: UITableViewController {
     /**
     * @property
@@ -80,6 +82,8 @@ class MessageViewController: UITableViewController {
         
         var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.resetBools()
+        
+        self.tableView.rowHeight = 70
                 }
 
 
@@ -235,11 +239,13 @@ class MessageViewController: UITableViewController {
         
         print(arrowPos)
         
-        var frame = CGRect(x: 285,y: 4,width: 40,height: 40)
+        var frame = CGRect(x: 335,y: 17,width: 40,height: 40)
         var imageView = UIImageView(frame: frame)
         imageView.image = UIImage(named: "cellArrow")
         
         cell.textLabel?.textColor = uglyBlue
+        
+        cell.textLabel?.font = openSansLarge
         
         if messArray.isEmpty {
             cell.willRemoveSubview(imageView)
